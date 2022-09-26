@@ -1,0 +1,17 @@
+# Dependencies
+node_modules
+
+# Editor
+.vscode
+
+# Build outputs
+.nuxt
+.output
+dist
+
+# Commitlint
+.husky
+commitlint.config.ts
+
+# Other
+README.md

@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  nuxt_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    networks:
+      - foodie-network
+      
+networks:
+  foodie-network:
