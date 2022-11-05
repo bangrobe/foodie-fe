@@ -6,12 +6,16 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
+    container_name: strapi-fe-nuxt
     ports:
-      - 3000:3000
+      - '3000'
     env_file:
       - .env
     networks:
       - foodie-network
+      - nginxproxyman
       
 networks:
   foodie-network:
+  nginxproxyman:
+    external: true
